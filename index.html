@@ -1142,11 +1142,9 @@
           form.reset();
         } else {
           throw new Error('Message failed to send');
-        }
-      } catch (error) {
-        formMessage.textContent = '❌ There was an error sending your message. Please try again later.';
-        formMessage.className = 'form-message error';
-      } finally {
+    }
+  }
+      finally {
         submitButton.disabled = false;
         submitButton.textContent = originalButtonText;
         formMessage.style.display = 'block';
